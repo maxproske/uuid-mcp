@@ -4,7 +4,6 @@
   "description": "Simple GPT Action that returns a random UUID",
   "main": "index.js",
   "scripts": {
-    "dev": "vercel dev",
     "build": "tsc"
   },
   "keywords": [

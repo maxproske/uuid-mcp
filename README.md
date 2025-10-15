@@ -18,7 +18,7 @@ npm install
 
 2. Run locally with Vercel CLI:
 ```bash
-npm run dev
+vercel dev
 ```
 
 The API will be available at `http://localhost:3000/api/random-uuid`
@@ -51,8 +51,8 @@ vercel
    - Click "Create new action"
 
 4. Import the OpenAPI schema:
-   - Either paste the contents of `public/openapi.json`
-   - Or provide the URL: `https://your-app.vercel.app/openapi.json`
+   - Either paste the contents of `public/openapi.yaml` or `public/openapi.json`
+   - Or provide the URL: `https://your-app.vercel.app/openapi.yaml`
 
 5. Test the action in ChatGPT:
    - Ask: "Generate a random UUID for me"
@@ -77,9 +77,10 @@ Returns a random UUID with a timestamp.
 ```
 gpt-actions/
 ├── api/
-│   └── random-uuid.ts    # Serverless function
+│   └── random-uuid.ts       # Serverless function
 ├── public/
-│   └── openapi.json      # OpenAPI specification
+│   ├── openapi.yaml         # OpenAPI specification (YAML)
+│   └── openapi.json         # OpenAPI specification (JSON)
 ├── package.json
 ├── tsconfig.json
 ├── vercel.json
